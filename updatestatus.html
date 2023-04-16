@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Update Status</title>
+    <link rel="icon" href="../Images/buLogo.png">
+    <link rel="stylesheet" href="../home/main.css" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+    <script src="../bootstrap/js/jquery.min.js"></script>
+    <script src="../bootstrap/js/popper.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+<div class="container-fluid"> 
+    <div class="row">
+        <div class="col-sm-12 col-md-2 col-lg-2" id="loginCol1">
+            <div class="row mt-3">
+                <div class="col-12">
+                    <img src="../Images/buLogo.png" alt="Babcock Logo" id="buLogo"> 
+                </div>
+
+            </div> 
+            <div class="row text-light">
+                <div class="offence">
+                    <div class="col-12" id="items">
+                        <a  href="../Offenders list/index.html"  class="offenceicons">
+                            <img src="../Add Offence/offendericon1.png" alt="offender list" onclick="offenderslist()"  id="offenderslist">
+                            <span onclick="offenderslist()" id="offenderfont">Offenders list</span> 
+                        </a>
+                       
+                    </div>
+                    <div class="col-12" id="items">
+                        <a href="../Add Offence/index.html"  class="offenceicons">
+                            <img src="../Add Offence/addoffence1.png" alt="add offence" onclick="addoffence()" id="addoffence">
+                        <span onclick="addoffence()" id="addoffencefont">Add Offence</span> 
+                        </a>
+                        
+                    </div>
+                    <div class="col-12" id="items">
+                        <a href="../Monthly Report/index.html"  class="offenceicons">
+                            <img src="../Add Offence/report2.png" alt="report" onclick="report()" id="report">
+                            <span onclick="report()" id="reportfont">Monthly Report</span>
+                        </a>
+                        
+                    </div>
+                    <div class="col-12" id="items">
+                        <a href="../Suspension List/index.html"  class="offenceicons">
+                            <img src="../Add Offence/suspension1.png" alt="sus" onclick="sus()" id="sus">
+                            <span onclick="sus()" id="susfont">Suspension List</span>
+                        </a>
+                        
+                    </div>
+                    <div class="col-12" id="items">
+                        <a href="../Expulsion List/index.html"  class="offenceicons">
+                            <img src="../Add Offence/expulsion1.png" alt="exp" onclick="exp()" id="exp">
+                            <span onclick="exp()" id="expfont">Expulsion List</span>
+                        </a>
+                        
+                    </div>
+                    <div class="col-12 ml-4" id="items">
+                        <a href="">
+                            <img src="../Add Offence/logout.png" alt="Babcock Logo">
+                            <span id="logout"> Logout</span>
+                        </a>
+                       
+                    </div>
+                </div>
+               
+
+            </div> 
+        </div>
+
+        <div class="col-sm-12 col-md-9 col-lg-9" id="col-9">
+                <div class="row" id="row-3">
+                    <div class="col-4  mt-2 mb-2">
+                        <img src="Add Offence/admin.png" alt="admin">
+                    </div>
+                    <div class="col-8 text-light mt-3 mb-4" id="buoms">
+                       BABCOCK UNIVERSITY OFFENCE MANAGEMENT SYSTEM
+                    </div>
+                </div>
+                <form action="">
+                <div class="row" id="offenceform">
+                    <div class="input-icons">
+                        <div class="col-7 mt-5">
+                            <div class="input-group pb-4" id="offenceinp">
+                                <label class="text-light">Name</label>
+                               <img src="../Add Offence/student.png" alt="name" class="icon" id="name"> 
+                                <input type="text" class="control">
+                            </div>
+                        </div>
+                        <div class="col-7 mt-4">
+                            <div class="input-group pb-4" id="offenceinp">
+                                <label  class="text-light">Matric number</label>
+                                <img src="../Add Offence/hash.png" alt="matric" class="icon" id="matric">
+                                <input type="text" class="control">
+                            </div>
+                        
+                        </div>
+                        <div class="col-7 mt-4">
+                            <div class="input-group pb-4" id="offenceinp">
+                                <label class="text-light">Course of study</label>
+                               <img src="../Add Offence/book.png" alt="course" class="icon"  id="course">
+                                <input type="text" class="control">
+                            </div>
+                        </div>
+                        
+                        <div class="col-7 mt-4">
+                            <div class="input-group pb-4" id="offenceinp">
+                                <label class="text-light">Offence committed</label>
+                                <img src="../Add Offence/Vector.png" alt="offencecommitted" class="icon" id="offencecomm">
+                                <textarea id="offence" cols="10" rows="1" class="control"></textarea>
+                            </div>
+                        
+                        </div>
+
+                        <div class="col-7 mt-4">
+                            <div class="input-group pb-4" id="offenceinp">
+                                <label class="text-light">Punishment Given</label>
+                               <img src="../Add Offence/given.png" alt="pungiven" class="icon"  id="pungiven">
+                                <input type="text" class="control">
+                            </div>
+                        </div>
+
+                    
+                </div>
+                   
+
+                    <div class="col-3 text-light mt-5 offset-2" id="status">Punishment Status:</div>
+                    <div class="form-group form-check col-3 text-light mt-5" id="status">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="radio" name="status" required> Ongoing
+                        </label>
+                      </div>
+                      <div class="form-group form-check col-3 text-light mt-5" id="status">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="radio" name="status" required> Completed
+                        </label>
+                      </div>
+
+                      <div class="col-sm-12 col-md-4 col-lg-4 ml-md-5 ml-lg-5"></div>
+                      <div class="col-sm-12 col-md-3 col-lg-3 ml-md-2 ml-lg-2">
+                        <button type="submit" class="btn bg-light mt-3 mb-3">Update Status</button>
+                      </div>
+                      
+                     
+                      
+                </div>
+                </form>
+        </div>
+    </div>
+</div>
+    <script src="../script.js"></script>
+  </body>
+</html>
