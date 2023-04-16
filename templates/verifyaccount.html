@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Verify Email </title>
+    <link rel="icon" href="{% static 'Images/buLogo.png' %}">
+    <link rel="stylesheet" href="{% static 'forgot_main.css' %}" />
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}" />
+  </head>
+
+  <body>
+    <div class="container" id="form-group">
+      <div class="row">
+        <div class="col-12">
+          <img src="{% static 'Images/key.png' %}" alt="key" class=" mx-auto d-block">
+         </div>
+        <div class="col-12 text-center text-1 mt-5">
+        ENTER VERIFICATION CODE
+        </div>
+        <div class="col-12 text-center mt-2 text-4">
+      Please enter the 5-digit OTP sent to your email
+         </div>
+          <form action="/accounts/verify/email/" method="post">
+            {% csrf_token %}
+            <div class="flex">
+              <div class="col-12 mt-5">
+                <input type="hidden" class="form-control verify offset-5" name="email" value="{{email}}" >
+                <input type="text" class="form-control verify offset-5"  maxlength="10" name="otp" id="otp"  required>
+              </div>
+              <a href=""><span  class="resendCode"> Resend Code</span></a>
+            </div>
+            <br>
+            
+            <button type="submit" class="btn btn-block text-light mt-4 offset-5" id="doneBtn">Done</button>
+          </form>
+          
+         
+        <a class="col-4 forgotpassword" href="/accounts/send_otp"><img src="{% static 'Images/back.png' %}" alt="back" > Back</a>
+      </div>
+      
+       
+    </div>
+    <script>
+      alert( {{otp}} );
+
+    </script>
+  </body>
+  </html>
