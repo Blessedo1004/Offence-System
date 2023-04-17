@@ -154,11 +154,25 @@ td{
     margin-top: -9px;
 }
 #welcome{
-    background: url("../babcock.jpg");
-    background-repeat: no-repeat;
+    background: url("../Images/school.webp");
+    font-family: 'Inter', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 #welcometext{
-    margin-top: 30%;
+    margin-top: 10%;
+    background: rgba(33, 35, 99, 0.59);
+    font-size: large;
+    margin-left: 8.5%;
+}
+#welcometext-2{
+    margin-top: 20%;
+    font-size: xx-large;
+}
+#welcomebtn{
+    background: #3E0896;
+    color: white;
+    margin-bottom: 12.5%;
 }
 #col-9{
     margin-left: 21%;
